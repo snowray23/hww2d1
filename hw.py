@@ -106,3 +106,16 @@ def display_tickets(status=None):
 open_new_ticket("Ticket003", "Raymond", "Coding error")
 update_status("Ticket001", "closed")
 display_tickets()
+
+
+#4
+import copy
+weekly_sales = {
+    "Week 1": {"Electronics": 12000, "Clothing": 5000, "Groceries": 7000},
+    "Week 2": {"Electronics": 15000, "Clothing": 6000, "Groceries": 8000}
+}
+
+sales_copy = copy.deepcopy(weekly_sales)
+sales_copy["Week 2"]["Electronics"] = 18000
+print(weekly_sales)
+print(sales_copy)
